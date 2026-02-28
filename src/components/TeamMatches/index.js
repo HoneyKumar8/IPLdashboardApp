@@ -1,7 +1,10 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
+import {PieChart, Pie, Cell, Legend, Tooltip} from 'recharts'
 import LatestMatch from '../LatestMatch'
 import MatchCard from '../MatchCard'
+
 import './index.css'
 
 class TeamMatches extends Component {
@@ -60,12 +63,32 @@ class TeamMatches extends Component {
   }
 
   render() {
-    const {
-      teamBannerUrl,
-      latestMatchDetails,
-      recentMatches,
-      isLoading,
-    } = this.state
+    const {teamBannerUrl, latestMatchDetails, recentMatches, isLoading} =
+      this.state
+
+    const wonCount = recentMatches.filter(
+      each => each.matchStatus === 'Won',
+    ).length
+
+    const lostCount = recentMatches.filter(
+      each => each.matchStatus === 'Lost',
+    ).length
+
+    const drawCount = recentMatches.filter(
+      each => each.matchStatus === 'Draw',
+    ).length
+
+    const data = [
+      {name: 'Won', value: wonCount},
+      {name: 'Lost', value: lostCount},
+      {name: 'Draw', value: drawCount},
+    ]
+
+    const COLORS = {
+      Won: '#28a745',
+      Lost: '#dc3545',
+      Draw: '#ffc107',
+    }
 
     return (
       <div className="team-matches-container">
@@ -75,6 +98,9 @@ class TeamMatches extends Component {
           </div>
         ) : (
           <>
+            <Link to="/" className="back-button">
+              Back
+            </Link>
             <img
               src={teamBannerUrl}
               alt="team banner"
@@ -87,6 +113,25 @@ class TeamMatches extends Component {
                 <MatchCard key={eachMatch.id} matchDetails={eachMatch} />
               ))}
             </ul>
+            <h1 className="statistics-heading">Match Statistics</h1>
+
+            <PieChart width={400} height={300}>
+              <Pie
+                data={data}
+                dataKey="value"
+                nameKey="name"
+                cx="50%"
+                cy="50%"
+                outerRadius={100}
+                label
+              >
+                {data.map(entry => (
+                  <Cell key={entry.name} fill={COLORS[entry.name]} />
+                ))}
+              </Pie>
+              <Tooltip />
+              <Legend />
+            </PieChart>
           </>
         )}
       </div>
