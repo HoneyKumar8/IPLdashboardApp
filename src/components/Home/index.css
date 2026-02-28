@@ -1,0 +1,40 @@
+.home-container {
+  background-color: #1e293b;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ipl-logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.ipl-heading {
+  font-size: 32px;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+.teams-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+@media screen and (min-width: 768px) {
+  .ipl-heading {
+    font-size: 40px;
+  }
+
+  .ipl-logo {
+    width: 70px;
+  }
+}

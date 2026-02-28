@@ -1,0 +1,26 @@
+.latest-match-card {
+  background-color: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.latest-match-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.latest-match-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.latest-match-details p {
+  margin: 0;
+  font-size: 16px;
+}

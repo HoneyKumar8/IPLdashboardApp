@@ -1,0 +1,23 @@
+.not-found-container {
+  background-color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+.not-found-heading {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #e31a1a;
+}
+
+.not-found-description {
+  font-size: 18px;
+  color: #ffffff;
+}
