@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/IPLdashboardApp/static/css/main.9aaf3290.chunk.css",
+    "main.js": "/IPLdashboardApp/static/js/main.55834d53.chunk.js",
+    "main.js.map": "/IPLdashboardApp/static/js/main.55834d53.chunk.js.map",
+    "runtime-main.js": "/IPLdashboardApp/static/js/runtime-main.5162967e.js",
+    "runtime-main.js.map": "/IPLdashboardApp/static/js/runtime-main.5162967e.js.map",
+    "static/js/2.8fb411f7.chunk.js": "/IPLdashboardApp/static/js/2.8fb411f7.chunk.js",
+    "static/js/2.8fb411f7.chunk.js.map": "/IPLdashboardApp/static/js/2.8fb411f7.chunk.js.map",
+    "index.html": "/IPLdashboardApp/index.html",
+    "static/css/main.9aaf3290.chunk.css.map": "/IPLdashboardApp/static/css/main.9aaf3290.chunk.css.map",
+    "static/js/2.8fb411f7.chunk.js.LICENSE.txt": "/IPLdashboardApp/static/js/2.8fb411f7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5162967e.js",
+    "static/js/2.8fb411f7.chunk.js",
+    "static/css/main.9aaf3290.chunk.css",
+    "static/js/main.55834d53.chunk.js"
+  ]
+}
